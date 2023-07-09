@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+<h1>home</h1>
+<p><%= startingcontent %>
+</p>
+  <% /* for loop or more updated .forEach(function(element){);} to tap in each ttitle */%>
+<% posts.forEach(function(post){ %>
+  <h1><%= post.title %></h1>
+  <p><%= post.content.substring(0, 100) + " ..."  %>
+  <a href="/posts/<%=post.title %>">Read more</a></p>
+<% }); %> 
+
+<%- include("partials/footer"); -%>
